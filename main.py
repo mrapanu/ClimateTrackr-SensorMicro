@@ -46,7 +46,8 @@ def connect_wifi(ssid, password):
 
 def get_local_time(gmt):
     utc_time = utime.localtime()
-    local_time = (utc_time[0], utc_time[1], utc_time[2], utc_time[3] + gmt, utc_time[4], utc_time[5])
+    local_hour = (utc_time[3] + gmt) % 24  # Ensure hour remains within 0-23 range
+    local_time = (utc_time[0], utc_time[1], utc_time[2], local_hour, utc_time[4], utc_time[5])
     return local_time
 
 def read_dht_sensor():
