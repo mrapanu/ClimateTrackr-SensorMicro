@@ -5,25 +5,17 @@ ClimateTrackr Sensor Micro is a Python-based project for tracking temperature an
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Features](#features)
-3. [Usage](#usage)
-4. [Configuration](#configuration)
+2. [Usage](#usage)
+3. [Configuration](#configuration)
     - [WiFi Configuration](#wifi-configuration)
     - [RabbitMQ Configuration](#rabbitmq-configuration)
     - [Sensor Configuration](#sensor-configuration)
-5. [Notes](#notes)
-6. [Dependencies](#dependencies)
+4. [Notes](#notes)
+5. [Dependencies](#dependencies)
 
 ## Introduction
 
 ClimateTrackr is designed to monitor temperature and humidity using a DHT sensor on a Raspberry Pi or similar environment. It publishes the collected data to RabbitMQ for further processing.
-
-## Features
-
-- Retrieves temperature and humidity data from a DHT sensor.
-- Connects to a WiFi network.
-- Synchronizes time using NTP.
-- Publishes sensor data to a RabbitMQ server.
 
 ## Usage
 
