@@ -20,9 +20,10 @@ ClimateTrackr is designed to monitor temperature and humidity using a DHT sensor
 ## Usage
 
 1. Configure the parameters directly in the `main.py` file.
-2. Upload the `main.py` file to your Raspberry Pi Pico / ESP device.
-3. Connect your DHT sensor to the appropriate pin on your Raspberry Pi Pico / ESP device.
-4. Power on your device.
+2. Setup Visual Studio Code to work with MicroPython. See `Useful Links` from `Notes` section.
+3. Upload the `main.py` file to your Raspberry Pi Pico / ESP device.
+4. Connect your DHT sensor to the appropriate pin on your Raspberry Pi Pico / ESP device.
+5. Power on your device.
 
 ## Configuration
 
@@ -60,6 +61,7 @@ Modify the variables in the `main.py` file to configure the project:
 
 Useful links:
 - https://www.instructables.com/How-to-Use-VSCode-With-Raspberry-Pi-Pico-W-and-Mic/
+- https://randomnerdtutorials.com/micropython-esp32-esp8266-vs-code-pymakr/
 
 ## Dependencies
 
