@@ -5,7 +5,8 @@ from machine import Pin
 ################## CONFIGURATION ##################
 ###################################################
 
-pin = Pin("LED", Pin.OUT)
+
+pin = Pin("LED", Pin.OUT)  # pin = Pin("LED", Pin.OUT) for pico W  pin = Pin(2, Pin.OUT) for esp
 dht_sensor = dht.DHT11(Pin(4)) #Set Pin Number as you need
 #dht_sensor = dht.DHT22(Pin(4)) #Set Pin Number as you need
 
@@ -112,9 +113,10 @@ def publish_data_to_rabbitmq(temperature, humidity, local_time):
 
 def main():
     connect_wifi(wifi_ssid, wifi_password)
-    
+    pin_value = 0
     while True:
-        pin.toggle()
+        pin_value ^= 1
+        pin.value(pin_value)
         try:
             local_time = get_local_time(gmt)
             temperature, humidity = read_dht_sensor()
